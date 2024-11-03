@@ -7,10 +7,10 @@
   "sourceUrl": "https://plugins.grayjay.app/Youtube/YoutubeConfig.json",
   "repositoryUrl": "https://futo.org",
   "scriptUrl": "./YoutubeScript.js",
-  "version": 193,
+  "version": 210,
   "iconUrl": "./youtube.png",
   "id": "35ae969a-a7db-11ed-afa1-0242ac120002",
-  "scriptSignature": "EiHbPj3er/P0wHUWmRcuvqYOWgtZWfRFUhiexPD2JodrkhnTGZp5CT6/4KEk7mNgAeuvw2XX3MC9K2YveOhlscX5LkHzjPjYu+V5fH22FNxCgerawpeS5PwH8ePN9hxLFIi+lhacR7hsjuRkOq3r9TgHVPkPT3zoGtSvvBdELhlsqmxWfgW3ax3goAxGpB/DleBrMnlOSrWOuukjhn/dO5QtGU4kkFNwmVqSbNemW9thTM10QmoZKMrJnBUjLazoQrReFpF6pLCOkhWDYBiEDBN/bHkEirckx3BCpgnQmr24xp2/uYOZuXyetLC+6UyceRR1/EtSbcakgJ+Nv4lGwg==",
+  "scriptSignature": "CAhx0I8wpq2wtngtnbWPyeGqcOoBnsXOSs+saKyYEzmRYQVoJuWRVHVw1MXa0VwuTyy2UHYh5/+ayYLk80xuUMv/0NUItVYnB/VodJeIAHdbL6TZANIA0CmTTdkZqZaWdUVk08nJDkaqQbXxIFiVkWB4r6ELCUE/frA93QQf3KaECIghi29G07Ct7me3j5kiAXyQUQMUC49miGLl9g1kobfmCeO3UOv8JApL3BLh2r30Y3fAg7s8QSpRd+ZJhp4LwNf5a/1xciFBUtJt5KfsLfLjog/tPZ3/Eo15z1NCaIYgdA5VuJkypj2bgY3/iuGAGXQodrZ/fBKqnpxjCPl0xg==",
   "scriptPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsoFJU4AReDyUnSQI9A99UjLCwkY8OH+1o8cdtf2EjSb+fO2qmP8MGMTAvfvgmq5d2QBJE2XHRkRO3JKcTlcc1j0WlOlU8P9W272DYCeX6oYaavpKNqGKoGEuodp9wtiyNwyH46++JfpU/uIUacZbZKkHv9gIGchmNvpKYZQjFd/8pUqXGpcXZP54tGSC9PLcY+5TozZThK7Oy1+3YEf1bZ44UinRYYATbLk/wNuAfsupvlt6nxZOcJhABhdo9V+gY0FE6Ayg5+1cd1noWhnRtLF+sPdEr3z8Nt15JEK5a/524t25FMhwz8yKxlGW5qW3QLJHSUgLQncL6a1zlZ1s8QIDAQAB",
   "packages": [
     "Http",
@@ -33,7 +33,8 @@
     "www.google.com",
     "google.com",
     "returnyoutubedislikeapi.com",
-    "sponsor.ajay.app"
+    "sponsor.ajay.app",
+    ".googlevideo.com"
   ],
   "settings": [
     {
@@ -81,6 +82,20 @@
       "default": "false"
     },
     {
+      "variable": "useUMP",
+      "name": "Force Experimental UMP Streams",
+      "description": "Force usage of experimental implementation of UMP. May be unstable and cost more performance.",
+      "type": "Boolean",
+      "default": "false"
+    },
+    {
+      "variable": "showVerboseToasts",
+      "name": "Show Verbose Messages",
+      "description": "Show messages that give more information about what is happening, might be considered annoying for some.",
+      "type": "Boolean",
+      "default": "false"
+    },
+    {
       "variable": "youtubeDislikerHeader",
       "name": "Return Youtube Dislike",
       "description": "This is a third-party database of video dislikes that combines historic data, crowd-sourced data, and estimations, and may not be accurate.\n\n(Using https://returnyoutubedislike.com)",
@@ -115,78 +130,88 @@
       "default": "false",
       "dependency": "sponsorBlock"
     },
-	  {
-		  "variable": "sponsorBlockCat_Sponsor",
-		  "name": "Skip Sponsors",
-		  "description": "Skip segments labeled as sponsors",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Intro",
-		  "name": "Skip Intros",
-		  "description": "Skip segments labeled as intros",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Outro",
-		  "name": "Skip Outros",
-		  "description": "Skip segments labeled as outros",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Self",
-		  "name": "Skip Self-Promos",
-		  "description": "Skip segments labeled as self-promos",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Offtopic",
-		  "name": "Skip Music-Offtopic",
-		  "description": "Skip segments labeled as music-offtopic",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Preview",
-		  "name": "Skip Preview",
-		  "description": "Skip segments labeled as previews",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Interaction",
-		  "name": "Skip Interaction",
-		  "description": "Skip segments labeled as interactions",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  },
-	  {
-		  "variable": "sponsorBlockCat_Filler",
-		  "name": "Skip Fillers",
-		  "description": "Skip segments labeled as fillers",
-		  "type": "Dropdown",
-		  "default": "0",
-		  "dependency": "sponsorBlock",
-		  "options": ["No skip", "Manual", "Automatic"]
-	  }
+	{
+	  "variable": "sponsorBlockCat_Sponsor",
+	  "name": "Skip Sponsors",
+	  "description": "Skip segments labeled as sponsors",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+			 
+			   
+
+	},
+	{
+	  "variable": "sponsorBlockCat_Intro",
+	  "name": "Skip Intros",
+	  "description": "Skip segments labeled as intros",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+
+									  
+						
+												   
+					
+					 
+							  
+	},
+	{
+	  "variable": "sponsorBlockCat_Outro",
+	  "name": "Skip Outros",
+	  "description": "Skip segments labeled as outros",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	},
+	{
+	  "variable": "sponsorBlockCat_Self",
+	  "name": "Skip Self-Promos",
+	  "description": "Skip segments labeled as self-promos",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	},
+	{
+	  "variable": "sponsorBlockCat_Offtopic",
+	  "name": "Skip Music-Offtopic",
+	  "description": "Skip segments labeled as music-offtopic",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	},
+	{
+	  "variable": "sponsorBlockCat_Preview",
+	  "name": "Skip Preview",
+	  "description": "Skip segments labeled as previews",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	},
+	{
+	  "variable": "sponsorBlockCat_Interaction",
+	  "name": "Skip Interaction",
+	  "description": "Skip segments labeled as interactions",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	},
+	{
+	  "variable": "sponsorBlockCat_Filler",
+	  "name": "Skip Fillers",
+	  "description": "Skip segments labeled as fillers",
+	  "type": "Dropdown",
+	  "default": "0",
+	  "dependency": "sponsorBlock",
+	  "options": ["No skip", "Manual", "Automatic"]
+	}
   ],
   "developerSubmitUrl": "https://dev.grayjay.app/api/Dev/Submit",
   "captcha": {
