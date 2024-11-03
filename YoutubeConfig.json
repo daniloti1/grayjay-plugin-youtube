@@ -130,88 +130,78 @@
       "default": "false",
       "dependency": "sponsorBlock"
     },
-	{
-	  "variable": "sponsorBlockCat_Sponsor",
-	  "name": "Skip Sponsors",
-	  "description": "Skip segments labeled as sponsors",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-			 
-			   
-
-	},
-	{
-	  "variable": "sponsorBlockCat_Intro",
-	  "name": "Skip Intros",
-	  "description": "Skip segments labeled as intros",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-
-									  
-						
-												   
-					
-					 
-							  
-	},
-	{
-	  "variable": "sponsorBlockCat_Outro",
-	  "name": "Skip Outros",
-	  "description": "Skip segments labeled as outros",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	},
-	{
-	  "variable": "sponsorBlockCat_Self",
-	  "name": "Skip Self-Promos",
-	  "description": "Skip segments labeled as self-promos",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	},
-	{
-	  "variable": "sponsorBlockCat_Offtopic",
-	  "name": "Skip Music-Offtopic",
-	  "description": "Skip segments labeled as music-offtopic",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	},
-	{
-	  "variable": "sponsorBlockCat_Preview",
-	  "name": "Skip Preview",
-	  "description": "Skip segments labeled as previews",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	},
-	{
-	  "variable": "sponsorBlockCat_Interaction",
-	  "name": "Skip Interaction",
-	  "description": "Skip segments labeled as interactions",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	},
-	{
-	  "variable": "sponsorBlockCat_Filler",
-	  "name": "Skip Fillers",
-	  "description": "Skip segments labeled as fillers",
-	  "type": "Dropdown",
-	  "default": "0",
-	  "dependency": "sponsorBlock",
-	  "options": ["No skip", "Manual", "Automatic"]
-	}
+    {
+      "variable": "sponsorBlockCat_Sponsor",
+      "name": "Skip Sponsors",
+      "description": "Skip segments labeled as sponsors",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Intro",
+      "name": "Skip Intros",
+      "description": "Skip segments labeled as intros",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Outro",
+      "name": "Skip Outros",
+      "description": "Skip segments labeled as outros",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Self",
+      "name": "Skip Self-Promos",
+      "description": "Skip segments labeled as self-promos",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Offtopic",
+      "name": "Skip Music-Offtopic",
+      "description": "Skip segments labeled as music-offtopic",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Preview",
+      "name": "Skip Preview",
+      "description": "Skip segments labeled as previews",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Interaction",
+      "name": "Skip Interaction",
+      "description": "Skip segments labeled as interactions",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    },
+    {
+      "variable": "sponsorBlockCat_Filler",
+      "name": "Skip Fillers",
+      "description": "Skip segments labeled as fillers",
+      "type": "Dropdown",
+      "default": "0",
+      "dependency": "sponsorBlock",
+      "options": ["No skip", "Manual", "Automatic"]
+    }
   ],
   "developerSubmitUrl": "https://dev.grayjay.app/api/Dev/Submit",
   "captcha": {
