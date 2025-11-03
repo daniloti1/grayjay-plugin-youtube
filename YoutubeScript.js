@@ -3597,7 +3597,6 @@ function generateDash(parentSource, sourceObj, ustreamerConfig, abrUrl, itag, re
 	let initialResp = undefined;
 	
 	const requestTime = (new Date()).getTime();
-	
 	const useAuth = !!_settings?.authDetails;
 	const useLogin = useAuth && bridge.isLoggedIn();
 
@@ -4240,7 +4239,7 @@ class YTABRExecutor {
 		if (useLogin) {
 			initialHeaders = getAuthContextHeaders(false);
 		}
-
+		
 		const initialResp = http.POST(abrUrlToRequest, postData, initialHeaders, useLogin, true);
 
 		this.rn = (this.rn ?? 0) + 1;
