@@ -5,8 +5,8 @@
 	"authorUrl": "https://futo.org",
 	"platformUrl": "https://youtube.com",
 	"sourceUrl": "https://raw.githubusercontent.com/daniloti1/grayjay-plugin-youtube/refs/heads/test/YoutubeScript.js",
-	"repositoryUrl": "https://raw.githubusercontent.com/daniloti1/grayjay-plugin-youtube/refs/heads/test",
-	"scriptUrl": "./YoutubeScript.js",
+	"repositoryUrl": "https://gitlab.futo.org/videostreaming/plugins/youtube",
+	"scriptUrl": "https://raw.githubusercontent.com/daniloti1/grayjay-plugin-youtube/refs/heads/test/YoutubeScript.js",
 
 	"version": 295,
 	"iconUrl": "./youtube.png",
